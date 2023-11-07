@@ -15,7 +15,7 @@ else
         exit
 fi
 
-python Binary.py ${dataset} True True False False False True False ${trainEpochs} > output.txt
+python Binary.py ${dataset} True True False False False True True ${trainEpochs} > output.txt
 
 cp models/${dataset}/2_residuals.h5 models/${dataset}/scripts/baseline_reg.h5
 cp output.txt models/${dataset}/scripts/baseline_reg.txt

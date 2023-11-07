@@ -98,7 +98,7 @@ if Train:
 	if not(os.path.exists('models/'+dataset)):
 		os.mkdir('models/'+dataset)
 	for resid_levels in range(2,3): #range(1,4):
-		print 'training with', resid_levels,'levels'
+		print('training with', resid_levels,'levels')
 		sess=K.get_session()
 		model=get_model(dataset,resid_levels,LUT,BINARY,trainable_means)
 		#model.summary()
@@ -174,6 +174,6 @@ if Evaluate:
 		model.compile(loss='categorical_crossentropy',optimizer=opt,metrics=['accuracy'])
 		#model.summary()
 		score=model.evaluate(X_test,Y_test,verbose=0)
-		print "with %d residuals, test loss was %0.4f, test accuracy was %0.4f"%(resid_levels,score[0],score[1])
+		print("with %d residuals, test loss was %0.4f, test accuracy was %0.4f"%(resid_levels,score[0],score[1]))
 
 

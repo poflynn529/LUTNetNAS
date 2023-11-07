@@ -1,3 +1,4 @@
+# Module import.
 import numpy as np
 import pickle
 import matplotlib.pyplot as plt
@@ -16,14 +17,15 @@ sys.path.insert(0, '..')
 from binarization_utils import *
 from model_architectures import get_model
 
-dataset = sys.argv[1]
-Train = sys.argv[2] == 'True'
-REG = sys.argv[3] == 'True'
-Retrain = sys.argv[4] == 'True'
-LUT = sys.argv[5] == 'True'
-BINARY = sys.argv[6] == 'True'
-trainable_means = sys.argv[7] == 'True'
-Evaluate = sys.argv[8] == 'True'
+# Input argument handling.
+dataset = sys.argv[1] # MNIST etc.
+Train = sys.argv[2] == 'True' # True
+REG = sys.argv[3] == 'True' # True
+Retrain = sys.argv[4] == 'True' # False
+LUT = sys.argv[5] == 'True' # False
+BINARY = sys.argv[6] == 'True' # False
+trainable_means = sys.argv[7] == 'True' # True
+Evaluate = sys.argv[8] == 'True' # True
 epochs = int(sys.argv[9])
 
 batch_size=100
@@ -37,9 +39,11 @@ print('BINARY is ', BINARY)
 print('trainable_means is ', trainable_means)
 print('Evaluate is ', Evaluate)
 
+# Regularisation function as described in the paper.
 def l2_reg(weight_matrix):
 	return 5e-7 * K.sqrt(K.sum(K.abs(weight_matrix)**2))
 
+# Not used since I'm focusing on unrolled LUTnet.
 def load_svhn(path_to_dataset):
 	import scipy.io as sio
 	train=sio.loadmat(path_to_dataset+'/train.mat')
@@ -59,6 +63,7 @@ def load_svhn(path_to_dataset):
 
 	return (X_train,y_train),(X_test,y_test)
 
+# Partitioning the data into test and train.
 if dataset=="MNIST":
 	(X_train, y_train), (X_test, y_test) = mnist.load_data()
 	# convert class vectors to binary class matrices
@@ -78,6 +83,8 @@ X_train=X_train.astype(np.float32)
 X_test=X_test.astype(np.float32)
 Y_train = np_utils.to_categorical(y_train, 10)
 Y_test = np_utils.to_categorical(y_test, 10)
+
+# Normalise & centre the data.
 X_train /= 255
 X_test /= 255
 X_train=2*X_train-1
@@ -88,20 +95,18 @@ print('X_train shape:', X_train.shape)
 print(X_train.shape[0], 'train samples')
 print(X_test.shape[0], 'test samples')
 
-
-
-
-
+# Train is a boolean set by arguments.
 if Train:
 	if not(os.path.exists('models')):
 		os.mkdir('models')
 	if not(os.path.exists('models/'+dataset)):
 		os.mkdir('models/'+dataset)
 	for resid_levels in range(2,3): #range(1,4):
-		print 'training with', resid_levels,'levels'
+		print('training with', resid_levels,'levels')
 		sess=K.get_session()
+		# get_model makes a call to model_architectures.py which contains a BNN for each layer.
 		model=get_model(dataset,resid_levels,LUT,BINARY,trainable_means)
-		#model.summary()
+		model.summary()
 
 		#gather all binary dense and binary convolution layers:
 		binary_layers=[]
@@ -117,6 +122,7 @@ if Train:
 		lr=0.01
 		decay=1e-6
 
+		# Not sure what this block is used for yet, possibly fine-tuning after LUTnet parsing? We shall see...
 		if Retrain:
 			weights_path='models/'+dataset+'/pretrained_pruned.h5'
 			model.load_weights(weights_path)
@@ -280,10 +286,12 @@ if Train:
 
 
 			model.add_loss( lossL2 )
+		# End of the big mystery block.
 
+
+		# Actually compile the model
 		opt = keras.optimizers.Adam(lr=lr,decay=decay)#SGD(lr=lr,momentum=0.9,decay=1e-5)
 		model.compile(loss='sparse_categorical_crossentropy',optimizer=opt,metrics=['accuracy'])
-
 
 		weights_path='models/'+dataset+'/'+str(resid_levels)+'_residuals.h5'
 		cback=keras.callbacks.ModelCheckpoint(weights_path, monitor='val_acc', save_best_only=True)
@@ -305,9 +313,9 @@ if Train:
 
 		else:
 			if keras.__version__[0]=='2':
-				history=model.fit(X_train, y_train,batch_size=batch_size,validation_data=(X_test, y_test), verbose=2,epochs=epochs,callbacks=[cback])
+				history=model.fit(X_train, y_train,batch_size=batch_size,validation_data=(X_test, y_test), verbose=1,epochs=epochs,callbacks=[cback])
 			if keras.__version__[0]=='1':
-				history=model.fit(X_train, y_train,batch_size=batch_size,validation_data=(X_test, y_test), verbose=2,nb_epoch=epochs,callbacks=[cback])
+				history=model.fit(X_train, y_train,batch_size=batch_size,validation_data=(X_test, y_test), verbose=1,nb_epoch=epochs,callbacks=[cback])
 		dic={'hard':history.history}
 		foo=open('models/'+dataset+'/history_'+str(resid_levels)+'_residuals.pkl','wb')
 		pickle.dump(dic,foo)
@@ -320,8 +328,8 @@ if Evaluate:
 		model.load_weights(weights_path)
 		opt = keras.optimizers.Adam()
 		model.compile(loss='categorical_crossentropy',optimizer=opt,metrics=['accuracy'])
-		#model.summary()
+		model.summary()
 		score=model.evaluate(X_test,Y_test,verbose=0)
-		print "with %d residuals, test loss was %0.4f, test accuracy was %0.4f"%(resid_levels,score[0],score[1])
+		print("with %d residuals, test loss was %0.4f, test accuracy was %0.4f"%(resid_levels,score[0],score[1]))
 
 

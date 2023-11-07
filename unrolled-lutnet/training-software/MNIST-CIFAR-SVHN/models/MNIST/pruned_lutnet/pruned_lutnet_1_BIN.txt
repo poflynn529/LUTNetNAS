@@ -1,0 +1,146 @@
+Dataset is  MNIST
+Train is  True
+REG is  False
+Retrain is  False
+LUT is  True
+BINARY is  True
+trainable_means is  False
+Evaluate is  True
+X_train shape: (60000, 784)
+60000 train samples
+10000 test samples
+training with 2 levels
+tracking <tf.Variable 'binary_dense_1/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_1/Variable_1:0' shape=(784, 256) dtype=float32> w
+tracking <tf.Variable 'binary_dense_2/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_2/Variable_1:0' shape=(256, 256) dtype=float32> w1
+tracking <tf.Variable 'binary_dense_2/Variable_2:0' shape=(256, 256) dtype=float32> w2
+tracking <tf.Variable 'binary_dense_2/Variable_3:0' shape=(256, 256) dtype=float32> w3
+tracking <tf.Variable 'binary_dense_2/Variable_4:0' shape=(256, 256) dtype=float32> w4
+tracking <tf.Variable 'binary_dense_2/Variable_5:0' shape=(256, 256) dtype=float32> w5
+tracking <tf.Variable 'binary_dense_2/Variable_6:0' shape=(256, 256) dtype=float32> w6
+tracking <tf.Variable 'binary_dense_2/Variable_7:0' shape=(256, 256) dtype=float32> w7
+tracking <tf.Variable 'binary_dense_2/Variable_8:0' shape=(256, 256) dtype=float32> w8
+tracking <tf.Variable 'binary_dense_2/Variable_9:0' shape=(256, 256) dtype=float32> w9
+tracking <tf.Variable 'binary_dense_2/Variable_10:0' shape=(256, 256) dtype=float32> w10
+tracking <tf.Variable 'binary_dense_2/Variable_11:0' shape=(256, 256) dtype=float32> w11
+tracking <tf.Variable 'binary_dense_2/Variable_12:0' shape=(256, 256) dtype=float32> w12
+tracking <tf.Variable 'binary_dense_2/Variable_13:0' shape=(256, 256) dtype=float32> w13
+tracking <tf.Variable 'binary_dense_2/Variable_14:0' shape=(256, 256) dtype=float32> w14
+tracking <tf.Variable 'binary_dense_2/Variable_15:0' shape=(256, 256) dtype=float32> w15
+tracking <tf.Variable 'binary_dense_2/Variable_16:0' shape=(256, 256) dtype=float32> w16
+tracking <tf.Variable 'binary_dense_2/Variable_17:0' shape=(256, 256) dtype=float32> w17
+tracking <tf.Variable 'binary_dense_2/Variable_18:0' shape=(256, 256) dtype=float32> w18
+tracking <tf.Variable 'binary_dense_2/Variable_19:0' shape=(256, 256) dtype=float32> w19
+tracking <tf.Variable 'binary_dense_2/Variable_20:0' shape=(256, 256) dtype=float32> w20
+tracking <tf.Variable 'binary_dense_2/Variable_21:0' shape=(256, 256) dtype=float32> w21
+tracking <tf.Variable 'binary_dense_2/Variable_22:0' shape=(256, 256) dtype=float32> w22
+tracking <tf.Variable 'binary_dense_2/Variable_23:0' shape=(256, 256) dtype=float32> w23
+tracking <tf.Variable 'binary_dense_2/Variable_24:0' shape=(256, 256) dtype=float32> w24
+tracking <tf.Variable 'binary_dense_2/Variable_25:0' shape=(256, 256) dtype=float32> w25
+tracking <tf.Variable 'binary_dense_2/Variable_26:0' shape=(256, 256) dtype=float32> w26
+tracking <tf.Variable 'binary_dense_2/Variable_27:0' shape=(256, 256) dtype=float32> w27
+tracking <tf.Variable 'binary_dense_2/Variable_28:0' shape=(256, 256) dtype=float32> w28
+tracking <tf.Variable 'binary_dense_2/Variable_29:0' shape=(256, 256) dtype=float32> w29
+tracking <tf.Variable 'binary_dense_2/Variable_30:0' shape=(256, 256) dtype=float32> w30
+tracking <tf.Variable 'binary_dense_2/Variable_31:0' shape=(256, 256) dtype=float32> w31
+tracking <tf.Variable 'binary_dense_2/Variable_32:0' shape=(256, 256) dtype=float32> w32
+tracking <tf.Variable 'binary_dense_3/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_3/Variable_1:0' shape=(256, 256) dtype=float32> w1
+tracking <tf.Variable 'binary_dense_3/Variable_2:0' shape=(256, 256) dtype=float32> w2
+tracking <tf.Variable 'binary_dense_3/Variable_3:0' shape=(256, 256) dtype=float32> w3
+tracking <tf.Variable 'binary_dense_3/Variable_4:0' shape=(256, 256) dtype=float32> w4
+tracking <tf.Variable 'binary_dense_3/Variable_5:0' shape=(256, 256) dtype=float32> w5
+tracking <tf.Variable 'binary_dense_3/Variable_6:0' shape=(256, 256) dtype=float32> w6
+tracking <tf.Variable 'binary_dense_3/Variable_7:0' shape=(256, 256) dtype=float32> w7
+tracking <tf.Variable 'binary_dense_3/Variable_8:0' shape=(256, 256) dtype=float32> w8
+tracking <tf.Variable 'binary_dense_3/Variable_9:0' shape=(256, 256) dtype=float32> w9
+tracking <tf.Variable 'binary_dense_3/Variable_10:0' shape=(256, 256) dtype=float32> w10
+tracking <tf.Variable 'binary_dense_3/Variable_11:0' shape=(256, 256) dtype=float32> w11
+tracking <tf.Variable 'binary_dense_3/Variable_12:0' shape=(256, 256) dtype=float32> w12
+tracking <tf.Variable 'binary_dense_3/Variable_13:0' shape=(256, 256) dtype=float32> w13
+tracking <tf.Variable 'binary_dense_3/Variable_14:0' shape=(256, 256) dtype=float32> w14
+tracking <tf.Variable 'binary_dense_3/Variable_15:0' shape=(256, 256) dtype=float32> w15
+tracking <tf.Variable 'binary_dense_3/Variable_16:0' shape=(256, 256) dtype=float32> w16
+tracking <tf.Variable 'binary_dense_3/Variable_17:0' shape=(256, 256) dtype=float32> w17
+tracking <tf.Variable 'binary_dense_3/Variable_18:0' shape=(256, 256) dtype=float32> w18
+tracking <tf.Variable 'binary_dense_3/Variable_19:0' shape=(256, 256) dtype=float32> w19
+tracking <tf.Variable 'binary_dense_3/Variable_20:0' shape=(256, 256) dtype=float32> w20
+tracking <tf.Variable 'binary_dense_3/Variable_21:0' shape=(256, 256) dtype=float32> w21
+tracking <tf.Variable 'binary_dense_3/Variable_22:0' shape=(256, 256) dtype=float32> w22
+tracking <tf.Variable 'binary_dense_3/Variable_23:0' shape=(256, 256) dtype=float32> w23
+tracking <tf.Variable 'binary_dense_3/Variable_24:0' shape=(256, 256) dtype=float32> w24
+tracking <tf.Variable 'binary_dense_3/Variable_25:0' shape=(256, 256) dtype=float32> w25
+tracking <tf.Variable 'binary_dense_3/Variable_26:0' shape=(256, 256) dtype=float32> w26
+tracking <tf.Variable 'binary_dense_3/Variable_27:0' shape=(256, 256) dtype=float32> w27
+tracking <tf.Variable 'binary_dense_3/Variable_28:0' shape=(256, 256) dtype=float32> w28
+tracking <tf.Variable 'binary_dense_3/Variable_29:0' shape=(256, 256) dtype=float32> w29
+tracking <tf.Variable 'binary_dense_3/Variable_30:0' shape=(256, 256) dtype=float32> w30
+tracking <tf.Variable 'binary_dense_3/Variable_31:0' shape=(256, 256) dtype=float32> w31
+tracking <tf.Variable 'binary_dense_3/Variable_32:0' shape=(256, 256) dtype=float32> w32
+tracking <tf.Variable 'binary_dense_4/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_4/Variable_1:0' shape=(256, 256) dtype=float32> w1
+tracking <tf.Variable 'binary_dense_4/Variable_2:0' shape=(256, 256) dtype=float32> w2
+tracking <tf.Variable 'binary_dense_4/Variable_3:0' shape=(256, 256) dtype=float32> w3
+tracking <tf.Variable 'binary_dense_4/Variable_4:0' shape=(256, 256) dtype=float32> w4
+tracking <tf.Variable 'binary_dense_4/Variable_5:0' shape=(256, 256) dtype=float32> w5
+tracking <tf.Variable 'binary_dense_4/Variable_6:0' shape=(256, 256) dtype=float32> w6
+tracking <tf.Variable 'binary_dense_4/Variable_7:0' shape=(256, 256) dtype=float32> w7
+tracking <tf.Variable 'binary_dense_4/Variable_8:0' shape=(256, 256) dtype=float32> w8
+tracking <tf.Variable 'binary_dense_4/Variable_9:0' shape=(256, 256) dtype=float32> w9
+tracking <tf.Variable 'binary_dense_4/Variable_10:0' shape=(256, 256) dtype=float32> w10
+tracking <tf.Variable 'binary_dense_4/Variable_11:0' shape=(256, 256) dtype=float32> w11
+tracking <tf.Variable 'binary_dense_4/Variable_12:0' shape=(256, 256) dtype=float32> w12
+tracking <tf.Variable 'binary_dense_4/Variable_13:0' shape=(256, 256) dtype=float32> w13
+tracking <tf.Variable 'binary_dense_4/Variable_14:0' shape=(256, 256) dtype=float32> w14
+tracking <tf.Variable 'binary_dense_4/Variable_15:0' shape=(256, 256) dtype=float32> w15
+tracking <tf.Variable 'binary_dense_4/Variable_16:0' shape=(256, 256) dtype=float32> w16
+tracking <tf.Variable 'binary_dense_4/Variable_17:0' shape=(256, 256) dtype=float32> w17
+tracking <tf.Variable 'binary_dense_4/Variable_18:0' shape=(256, 256) dtype=float32> w18
+tracking <tf.Variable 'binary_dense_4/Variable_19:0' shape=(256, 256) dtype=float32> w19
+tracking <tf.Variable 'binary_dense_4/Variable_20:0' shape=(256, 256) dtype=float32> w20
+tracking <tf.Variable 'binary_dense_4/Variable_21:0' shape=(256, 256) dtype=float32> w21
+tracking <tf.Variable 'binary_dense_4/Variable_22:0' shape=(256, 256) dtype=float32> w22
+tracking <tf.Variable 'binary_dense_4/Variable_23:0' shape=(256, 256) dtype=float32> w23
+tracking <tf.Variable 'binary_dense_4/Variable_24:0' shape=(256, 256) dtype=float32> w24
+tracking <tf.Variable 'binary_dense_4/Variable_25:0' shape=(256, 256) dtype=float32> w25
+tracking <tf.Variable 'binary_dense_4/Variable_26:0' shape=(256, 256) dtype=float32> w26
+tracking <tf.Variable 'binary_dense_4/Variable_27:0' shape=(256, 256) dtype=float32> w27
+tracking <tf.Variable 'binary_dense_4/Variable_28:0' shape=(256, 256) dtype=float32> w28
+tracking <tf.Variable 'binary_dense_4/Variable_29:0' shape=(256, 256) dtype=float32> w29
+tracking <tf.Variable 'binary_dense_4/Variable_30:0' shape=(256, 256) dtype=float32> w30
+tracking <tf.Variable 'binary_dense_4/Variable_31:0' shape=(256, 256) dtype=float32> w31
+tracking <tf.Variable 'binary_dense_4/Variable_32:0' shape=(256, 256) dtype=float32> w32
+tracking <tf.Variable 'binary_dense_5/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_5/Variable_1:0' shape=(256, 10) dtype=float32> w1
+tracking <tf.Variable 'binary_dense_5/Variable_2:0' shape=(256, 10) dtype=float32> w2
+tracking <tf.Variable 'binary_dense_5/Variable_3:0' shape=(256, 10) dtype=float32> w3
+tracking <tf.Variable 'binary_dense_5/Variable_4:0' shape=(256, 10) dtype=float32> w4
+tracking <tf.Variable 'binary_dense_5/Variable_5:0' shape=(256, 10) dtype=float32> w5
+tracking <tf.Variable 'binary_dense_5/Variable_6:0' shape=(256, 10) dtype=float32> w6
+tracking <tf.Variable 'binary_dense_5/Variable_7:0' shape=(256, 10) dtype=float32> w7
+tracking <tf.Variable 'binary_dense_5/Variable_8:0' shape=(256, 10) dtype=float32> w8
+tracking <tf.Variable 'binary_dense_5/Variable_9:0' shape=(256, 10) dtype=float32> w9
+tracking <tf.Variable 'binary_dense_5/Variable_10:0' shape=(256, 10) dtype=float32> w10
+tracking <tf.Variable 'binary_dense_5/Variable_11:0' shape=(256, 10) dtype=float32> w11
+tracking <tf.Variable 'binary_dense_5/Variable_12:0' shape=(256, 10) dtype=float32> w12
+tracking <tf.Variable 'binary_dense_5/Variable_13:0' shape=(256, 10) dtype=float32> w13
+tracking <tf.Variable 'binary_dense_5/Variable_14:0' shape=(256, 10) dtype=float32> w14
+tracking <tf.Variable 'binary_dense_5/Variable_15:0' shape=(256, 10) dtype=float32> w15
+tracking <tf.Variable 'binary_dense_5/Variable_16:0' shape=(256, 10) dtype=float32> w16
+tracking <tf.Variable 'binary_dense_5/Variable_17:0' shape=(256, 10) dtype=float32> w17
+tracking <tf.Variable 'binary_dense_5/Variable_18:0' shape=(256, 10) dtype=float32> w18
+tracking <tf.Variable 'binary_dense_5/Variable_19:0' shape=(256, 10) dtype=float32> w19
+tracking <tf.Variable 'binary_dense_5/Variable_20:0' shape=(256, 10) dtype=float32> w20
+tracking <tf.Variable 'binary_dense_5/Variable_21:0' shape=(256, 10) dtype=float32> w21
+tracking <tf.Variable 'binary_dense_5/Variable_22:0' shape=(256, 10) dtype=float32> w22
+tracking <tf.Variable 'binary_dense_5/Variable_23:0' shape=(256, 10) dtype=float32> w23
+tracking <tf.Variable 'binary_dense_5/Variable_24:0' shape=(256, 10) dtype=float32> w24
+tracking <tf.Variable 'binary_dense_5/Variable_25:0' shape=(256, 10) dtype=float32> w25
+tracking <tf.Variable 'binary_dense_5/Variable_26:0' shape=(256, 10) dtype=float32> w26
+tracking <tf.Variable 'binary_dense_5/Variable_27:0' shape=(256, 10) dtype=float32> w27
+tracking <tf.Variable 'binary_dense_5/Variable_28:0' shape=(256, 10) dtype=float32> w28
+tracking <tf.Variable 'binary_dense_5/Variable_29:0' shape=(256, 10) dtype=float32> w29
+tracking <tf.Variable 'binary_dense_5/Variable_30:0' shape=(256, 10) dtype=float32> w30
+tracking <tf.Variable 'binary_dense_5/Variable_31:0' shape=(256, 10) dtype=float32> w31
+tracking <tf.Variable 'binary_dense_5/Variable_32:0' shape=(256, 10) dtype=float32> w32

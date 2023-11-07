@@ -1,0 +1,22 @@
+Dataset is  MNIST
+Train is  True
+REG is  False
+Retrain is  True
+LUT is  False
+BINARY is  True
+trainable_means is  True
+Evaluate is  True
+X_train shape: (60000, 784)
+60000 train samples
+10000 test samples
+training with 2 levels
+tracking <tf.Variable 'binary_dense_1/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_1/Variable_1:0' shape=(784, 256) dtype=float32> w
+tracking <tf.Variable 'binary_dense_2/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_2/Variable_1:0' shape=(256, 256) dtype=float32> w
+tracking <tf.Variable 'binary_dense_3/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_3/Variable_1:0' shape=(256, 256) dtype=float32> w
+tracking <tf.Variable 'binary_dense_4/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_4/Variable_1:0' shape=(256, 256) dtype=float32> w
+tracking <tf.Variable 'binary_dense_5/Variable:0' shape=() dtype=float32> gamma
+tracking <tf.Variable 'binary_dense_5/Variable_1:0' shape=(256, 10) dtype=float32> w
